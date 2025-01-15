@@ -1,0 +1,28 @@
+
+
+
+
+SPAJANJE frejmova
+
+
+ffmpeg -framerate 30 -i s%d.png -c:v libx264 -r 30 output.mp4
+
+
+
+
+
+
+
+
+
+
+
+ODVAJANJE frejmova
+
+
+ffmpeg -i naziv.mov -q:v 2 -start_number 0 "%05d.jpg"
+
+
+
+
+
