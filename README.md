@@ -33,6 +33,6 @@ A basic Python video editor that uses the SAM2 (Segment Anything Model 2 develop
 
 2. Enjoy the app
 
-## Contributors
+
 
 
