@@ -1,9 +1,38 @@
-# Video-processing-generic-segmentation
+# Simple Video Editor with SAM2 Model
 
-@article{ravi2024sam2,
-  title={SAM 2: Segment Anything in Images and Videos},
-  author={Ravi, Nikhila and Gabeur, Valentin and Hu, Yuan-Ting and Hu, Ronghang and Ryali, Chaitanya and Ma, Tengyu and Khedr, Haitham and R{\"a}dle, Roman and Rolland, Chloe and Gustafson, Laura and Mintun, Eric and Pan, Junting and Alwala, Kalyan Vasudev and Carion, Nicolas and Wu, Chao-Yuan and Girshick, Ross and Doll{\'a}r, Piotr and Feichtenhofer, Christoph},
-  journal={arXiv preprint arXiv:2408.00714},
-  url={https://arxiv.org/abs/2408.00714},
-  year={2024}
-}
+A basic Python video editor that uses the SAM2 (Segment Anything Model 2 developed by Meta https://github.com/facebookresearch/sam2) to edit video backgrounds or objects. The tool allows you to select objects in the video using positive and negative points for precise segmentation.
+
+## Features
+
+- Edit background or selected objects in videos.
+- Use positive and negative points to define objects.
+- Simple interface.
+
+## Requirements
+
+- Python 3.x
+- torch (PyTorch)
+- opencv-python
+- sam2
+- numpy
+- ffmpeg-
+
+## Installation
+
+1. Clone the repository:  git clone https://github.com/Darex97/SAM2-Video-Editor.git
+
+2. pip install -e .
+
+3. pip install sam2
+
+4. Download Checkpoints
+
+## Usage
+
+1. Run test1.py
+
+2. Enjoy the app
+
+## Contributors
+
+
