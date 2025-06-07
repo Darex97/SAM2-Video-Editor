@@ -19,13 +19,13 @@ Cilj ovog rada i aplikacije je kreiranje desktop rešenja koje koristi SAM2 mode
 - [Zaključak](#zaključak)
  
 
-# SAM2 (Segment Anything Model 2)
+## SAM2 (Segment Anything Model 2)
 
 Segment Anything Model 2 (SAM2) predstavlja napredni model za segmentaciju koji omogućava precizno izdvajanje i praćenje objekata kako na slikama, tako i na video zapisima. Razvio ga je Meta tim kao unapređenu verziju originalnog Segment Anything Modela.
 
 SAM2 korisniku pruža mogućnost da interaktivno izabere objekte pomoću pozitivnih i negativnih tačaka na slici ili u određenom trenutku video zapisa, kao i putem pravougaonika za selekciju. Kao rezultat, model generiše precizne maske koje tačno označavaju poziciju izabranog objekta kroz ceo video ili na pojedinačnoj slici. Pored toga, SAM2 postiže značajno brže i tačnije rezultate u poređenju sa prethodnom verzijom, čineći ga efikasnim alatom za primenu u obradi vizuelnih sadržaja.
 
-# Mogućnosti SAM2 modela
+## Mogućnosti SAM2 modela
 
 - **Segmentacija objekata na slikama i video zapisima**  
   SAM2 može precizno izdvojiti i pratiti objekte kako na pojedinačnim slikama, tako i kroz čitave video zapise.
@@ -45,15 +45,15 @@ SAM2 korisniku pruža mogućnost da interaktivno izabere objekte pomoću pozitiv
 - **Praćenje objekata kroz video**  
   SAM2 omogućava konzistentnu segmentaciju istog objekta kroz sve kadrove video zapisa, što olakšava dalju obradu i analizu.
 
-# Problemi koje SAM2 rešava
+## Problemi koje SAM2 rešava
 
 SAM2 model rešava nekoliko ključnih problema u oblasti segmentacije slike i videa. Prvo, omogućava preciznu segmentaciju objekata čak i u složenim scenama sa više objekata i zahtevnim pozadinama, što je izazov za mnoge tradicionalne metode. Takođe, pruža interaktivnu i fleksibilnu selekciju objekata koristeći različite pristupe, poput tačaka i pravougaonika, čime se poboljšava tačnost segmentacije i korisničko iskustvo. Jedna od važnih karakteristika SAM2 je segmentacija kroz video zapise, gde model omogućava dosledno praćenje i izdvajanje objekata kroz sve kadrove, što značajno olakšava obradu dinamičnih scena. Pored toga, SAM2 je optimizovan za brzinu i efikasnost, što omogućava rad u realnom vremenu ili obradu velikih video fajlova bez gubitka performansi. Model je generički, što znači da može segmentisati širok spektar objekata bez potrebe za dodatnim treninzima ili specijalnim podešavanjima za svaki novi tip objekta, što značajno smanjuje vreme i resurse potrebne za implementaciju. Na kraju, SAM2 unapređuje korisničko iskustvo u video editovanju, omogućavajući preciznu primenu efekata i manipulaciju izdvojenim objektima, čineći proces kreativne obrade videa intuitivnijim i efikasnijim.
 
-# Prednosti korišćenja SAM2 modela
+## Prednosti korišćenja SAM2 modela
 
 Korišćenje SAM2 modela donosi brojne prednosti u obradi slike i video zapisa. Pre svega, SAM2 omogućava visoku preciznost segmentacije objekata, čak i u složenim i dinamičnim scenama, zahvaljujući naprednim algoritmima i interaktivnim metodama selekcije. Model je izuzetno brz i efikasan, što ga čini pogodnim za rad sa velikim video fajlovima i aplikacije u realnom vremenu. Takođe, SAM2 je generički i ne zahteva dodatne treninge za nove vrste objekata, što smanjuje vreme i resurse potrebne za prilagođavanje različitim projektima. Fleksibilnost u izboru objekata putem tačaka ili pravougaonika dodatno poboljšava korisničko iskustvo i omogućava preciznu kontrolu nad segmentacijom. Osim toga, SAM2 model omogućava konzistentno praćenje objekata kroz sve kadrove video zapisa, što je ključna funkcionalnost za video editovanje i analitiku. Sve ove prednosti čine SAM2 moćnim i praktičnim alatom za širok spektar primena u oblasti računarske vizije i video obrade.
 
-# Konkurentna rešenja
+## Konkurentna rešenja
 
 Na tržištu i u akademskoj zajednici postoji više rešenja za segmentaciju objekata na slikama i video zapisima, od kojih su najpoznatija **Mask R-CNN**, **DeepLab**, **U-Net** i **YOLACT**. Ovi modeli su pokazali dobre rezultate u preciznoj segmentaciji, ali često zahtevaju značajne resurse za treniranje i nisu uvek prilagođeni za interaktivnu upotrebu u realnom vremenu.
 
@@ -63,7 +63,7 @@ U poređenju sa originalnim **Segment Anything Modelom (SAM)**, **SAM2** donosi 
 
 SAM2 model kombinuje visoku tačnost segmentacije sa brzinom i fleksibilnošću interaktivnog izbora objekata, omogućavajući primenu u širem spektru slučajeva bez potrebe za dodatnim treninzima ili podešavanjima. Ovo ga čini konkurentnim i pogodnim za moderne aplikacije video editovanja i računarske vizije.
 
-# Ograničenja SAM2 modela
+## Ograničenja SAM2 modela
 
 Iako SAM2 predstavlja značajan napredak u oblasti segmentacije objekata na video zapisima, ovaj model i dalje ima određena ograničenja i prostor za unapređenje. Model je veoma precizan i efikasan pri izdvajanja i praćenju objekata na kratkim video zapisima, naročito kada je praćeni objekat jedini deo scene koji se kreće. Međutim, problemi mogu nastati u situacijama kada je ugao kamere nepovoljan ili kada scena sadrži više sličnih objekata, što može dovesti do smanjenja tačnosti segmentacije i grešaka u prepoznavanju, gde model može pomešati slične objekte sa onima koje treba pratiti.
 
@@ -87,19 +87,19 @@ Ova aplikacija koristi sledeće biblioteke i alate:
 
 ## Instalacija
 
-1. Kloniraj repozitorijum:
+1. Klonirajte repozitorijum:
 ```bash
 git clone https://github.com/Darex97/SAM2-Video-Editor.git
 cd SAM2-Video-Editor
 ```
 
-2. Instaliraj zavisnosti:
+2. Instalirajte zavisnosti:
 ```bash
 pip install -e .
 pip install sam2
 ```
 
-3. Preuzmi pretrenirane modele (checkpoint fajlove) za SAM2 sa zvanične SAM2 stranice:
+3. Preuzmite pretrenirane modele (checkpoint fajlove) za SAM2 sa zvanične SAM2 stranice:
 https://github.com/facebookresearch/sam2
 
 4. (Opciono)
@@ -108,17 +108,17 @@ https://developer.nvidia.com/cuda-downloads
 
 ## Pokretanje aplikacije
 
-Nakon što instaliraš sve zavisnosti i preuzmeš SAM2 model, aplikaciju možeš pokrenuti na jedan od sledećih načina:
+Nakon što instalirate sve zavisnosti i preuzmete SAM2 model, aplikaciju možete pokrenuti na jedan od sledećih načina:
 
 ###  Opcija 1: Pokretanje iz Visual Studio Code-a
 
-1. Otvori folder projekta u **Visual Studio Code-u**  
-2. Otvori fajl `test1.py`  
-3. Klikni na **Run** ili pokreni program preko terminala unutar VS Code-a
+1. Otvorite folder projekta u **Visual Studio Code-u**  
+2. Otvorite fajl `test1.py`  
+3. Kliknite na **Run** ili pokrenite program preko terminala unutar VS Code-a
 
 ###  Opcija 2: Pokretanje iz terminala
 
-Ukoliko si u korenskom direktorijumu projekta (`SAM2-Video-Editor`), koristi komandu:
+Ukoliko ste u korenskom direktorijumu projekta (`SAM2-Video-Editor`), koristite komandu:
 
 ```bash
 python test1.py
