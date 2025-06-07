@@ -1,6 +1,6 @@
 # Jednostavan Video Editor zasnovan na SAM2 modelu
 
-Savremene metode za obradu video zapisa sve više koriste napredne modele mašinskog učenja kako bi povećale tačnost i brzinu segmentacije sadržaja. U ovom projektu istražuje se primena **SAM2 (Segment Anything Model 2)** modela, koji predstavlja unapređenu verziju originalnog SAM modela za segmentaciju slika, sa poboljšanjima u brzini obrade i preciznijoj detekciji objekata.
+Savremene metode za obradu video zapisa sve više koriste napredne modele mašinskog učenja kako bi povećale tačnost i brzinu segmentacije sadržaja. U ovom projektu istražuje se primena **SAM2 (Segment Anything Model 2 https://github.com/facebookresearch/sam2)** modela, koji predstavlja unapređenu verziju originalnog SAM modela za segmentaciju slika, sa poboljšanjima u brzini obrade i preciznijoj detekciji objekata.
 
 Cilj ovog rada i aplikacije je kreiranje desktop rešenja koje koristi SAM2 model za generičku segmentaciju video zapisa. Korisniku se pruža mogućnost da izabere određeni vremenski trenutak u video zapisu i pomoću pozitivnih i negativnih tačaka precizno izdvoji željene objekte. U slučaju greške, aplikacija omogućava opoziv poslednje odabrane tačke. Nakon toga, kreiraju se maske za ceo video i omogućava se primena različitih vizuelnih efekata, kako na izdvojene objekte, tako i na pozadinu.
 
@@ -55,7 +55,7 @@ Korišćenje SAM2 modela donosi brojne prednosti u obradi slike i video zapisa. 
 
 ## Konkurentna rešenja
 
-Na tržištu i u akademskoj zajednici postoji više rešenja za segmentaciju objekata na slikama i video zapisima, od kojih su najpoznatija **Mask R-CNN**, **DeepLab**, **U-Net** i **YOLACT**. Ovi modeli su pokazali dobre rezultate u preciznoj segmentaciji, ali često zahtevaju značajne resurse za treniranje i nisu uvek prilagođeni za interaktivnu upotrebu u realnom vremenu.
+Trenutno postoji više rešenja za segmentaciju objekata na slikama i video zapisima, od kojih su najpoznatija **Mask R-CNN**, **DeepLab**, **U-Net** i **YOLACT**. Ovi modeli su pokazali dobre rezultate u preciznoj segmentaciji, ali često zahtevaju značajne resurse za treniranje i nisu uvek prilagođeni za interaktivnu upotrebu u realnom vremenu.
 
 Takođe, mnogi tradicionalni pristupi se oslanjaju na specifične domene ili vrste objekata, što ograničava njihovu primenu u generičkim scenarijima. Pored toga, segmentacija video zapisa sa doslednim praćenjem objekata kroz sve kadrove često je izazov zbog problema kao što su promene osvetljenja, pozadine i pomeranja objekata.
 
@@ -81,7 +81,7 @@ Ova aplikacija koristi sledeće biblioteke i alate:
 - [SAM2](https://github.com/facebookresearch/sam2)  
 - OpenCV (`opencv-python`)  
 - NumPy  
-- ffmpeg (preporučuje se i instalacija `ffmpeg-python`)
+- ffmpeg
 
 ---
 
