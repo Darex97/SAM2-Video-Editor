@@ -1,6 +1,15 @@
-#Jednostavan Video Editor zasnovan na SAM2 modelu
+# Jednostavan Video Editor zasnovan na SAM2 modelu
 
 Ovo je jednostavna Python aplikacija koja koristi **SAM2 (Segment Anything Model 2)** razvijen od strane Meta AI tima za segmentaciju objekata na video zapisima. Omogućava korisnicima da pomoću pozitivnih i negativnih tačaka izdvoje objekte iz videa i primene različite vizuelne efekte – kako na objekte, tako i na pozadinu.
+
+## Sadržaj
+
+- [Karakteristike](#Karakteristike)  
+- [Potrebne tehnologije i biblioteke](#Potrebne-tehnologije-i-biblioteke)  
+- [Instalacija](#Instalacija)  
+- [Pokretanje aplikacije](#Pokretanje-aplikacije)  
+- [Kreiranje projekta](#kreiranje-projekta)  
+- [Pokretanje projekta](#pokretanje-projekta)  
 
 ##  Karakteristike
 
@@ -23,7 +32,7 @@ Ova aplikacija koristi sledeće biblioteke i alate:
 
 ---
 
-## 📦 Instalacija
+## Instalacija
 
 1. Kloniraj repozitorijum:
 ```bash
