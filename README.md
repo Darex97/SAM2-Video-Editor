@@ -53,7 +53,7 @@ Korišćenje SAM2 modela donosi brojne prednosti u obradi slike i video zapisa. 
 
 ## Konkurentna rešenja
 
-Trenutno postoji više rešenja za segmentaciju objekata na slikama i video zapisima, od kojih su najpoznatija **Mask R-CNN**, **DeepLab**, **U-Net** i **YOLACT**. Ovi modeli su pokazali dobre rezultate u preciznoj segmentaciji, ali često zahtevaju značajne resurse za treniranje i nisu uvek prilagođeni za interaktivnu upotrebu u realnom vremenu.
+Trenutno postoji više rešenja za segmentaciju objekata na slikama, od kojih su najpoznatija **Mask R-CNN**, **DeepLab**, **U-Net** i **YOLACT**. Ovi modeli su pokazali dobre rezultate u preciznoj segmentaciji, ali često zahtevaju značajne resurse za treniranje. Još jedan problem je što svi ovi modeli ne mogu da vrše segmentaciju na video zapisima bez integracije sa posebnim algoritmima za praćenje objekata kroz vreme, što dodatno komplikuje implementaciju i povećava upotrebu resursa (SAM + Xmem++ i SAM + Cutie).
 
 Takođe, mnogi tradicionalni pristupi se oslanjaju na specifične domene ili vrste objekata, što ograničava njihovu primenu u svakodnevnim situacijama. Pored toga, segmentacija video zapisa sa doslednim praćenjem objekata kroz sve kadrove često je izazov zbog problema kao što su promene osvetljenja, pozadine i pomeranja objekata.
 
