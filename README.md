@@ -52,17 +52,17 @@ SAM2 model rešava nekoliko ključnih problema u oblasti segmentacije slike i vi
 
 ## Prednosti korišćenja SAM2 modela
 
-Korišćenje SAM2 modela donosi brojne prednosti u obradi slike i video zapisa. Pre svega, SAM2 omogućava visoku preciznost segmentacije objekata, čak i u složenim i dinamičnim scenama, zahvaljujući naprednim algoritmima i interaktivnim metodama selekcije. Model je izuzetno brz i efikasan, što ga čini pogodnim za rad sa velikim video fajlovima i aplikacije u realnom vremenu. Takođe, SAM2 je generički i ne zahteva dodatne treninge za nove vrste objekata, što smanjuje vreme i resurse potrebne za prilagođavanje različitim projektima. Fleksibilnost u izboru objekata putem tačaka ili pravougaonika dodatno poboljšava korisničko iskustvo i omogućava preciznu kontrolu nad segmentacijom. Osim toga, SAM2 model omogućava konzistentno praćenje objekata kroz sve kadrove video zapisa, što je ključna funkcionalnost za video editovanje i analitiku. Sve ove prednosti čine SAM2 moćnim i praktičnim alatom za širok spektar primena u oblasti računarske vizije i video obrade.
+Korišćenje SAM2 modela donosi brojne prednosti u obradi slike i video zapisa. Pre svega, SAM2 omogućava visoku preciznost segmentacije objekata, čak i u složenim scenama, zahvaljujući naprednim algoritmima. Model je izuzetno brz i efikasan, što ga čini pogodnim za rad sa velikim video fajlovima. Takođe, SAM2 je generički i ne zahteva dodatne treninge za nove vrste objekata, što smanjuje vreme i resurse potrebne za prilagođavanje različitim projektima. Fleksibilnost u izboru objekata putem tačaka ili pravougaonika dodatno poboljšava korisničko iskustvo i omogućava preciznu kontrolu nad segmentacijom. Osim toga, SAM2 model omogućava konzistentno praćenje objekata kroz sve kadrove video zapisa, što je ključna funkcionalnost za video editovanje. Sve ove prednosti čine SAM2 moćnim i praktičnim alatom za širok spektar primena u oblasti računarskog vida i video obrade.
 
 ## Konkurentna rešenja
 
 Trenutno postoji više rešenja za segmentaciju objekata na slikama i video zapisima, od kojih su najpoznatija **Mask R-CNN**, **DeepLab**, **U-Net** i **YOLACT**. Ovi modeli su pokazali dobre rezultate u preciznoj segmentaciji, ali često zahtevaju značajne resurse za treniranje i nisu uvek prilagođeni za interaktivnu upotrebu u realnom vremenu.
 
-Takođe, mnogi tradicionalni pristupi se oslanjaju na specifične domene ili vrste objekata, što ograničava njihovu primenu u generičkim scenarijima. Pored toga, segmentacija video zapisa sa doslednim praćenjem objekata kroz sve kadrove često je izazov zbog problema kao što su promene osvetljenja, pozadine i pomeranja objekata.
+Takođe, mnogi tradicionalni pristupi se oslanjaju na specifične domene ili vrste objekata, što ograničava njihovu primenu u svakodnevnim situacijama. Pored toga, segmentacija video zapisa sa doslednim praćenjem objekata kroz sve kadrove često je izazov zbog problema kao što su promene osvetljenja, pozadine i pomeranja objekata.
 
-U poređenju sa originalnim **Segment Anything Modelom (SAM)**, **SAM2** donosi značajna poboljšanja u brzini obrade i tačnosti segmentacije, kao i bolju podršku za video zapise kroz efikasnije praćenje objekata u vremenskoj dimenziji. Za razliku od SAM-a koji je ograničen na statične slike, SAM2 omogućava pouzdanu segmentaciju i praćenje objekata kroz video zapise. Takodje, SAM2 je optimizovan za bržu i precizniju segmentaciju, što ga čini pogodnijim za primenu u zahtevnim i interaktivnim scenarijima.
+U poređenju sa originalnim **Segment Anything Modelom (SAM)**, **SAM2** donosi značajna poboljšanja u brzini obrade i tačnosti segmentacije, kao i bolju podršku za video zapise kroz efikasnije praćenje objekata u vremenskoj dimenziji. Za razliku od SAM-a koji je ograničen na statične slike, SAM2 omogućava pouzdanu segmentaciju i praćenje objekata kroz video zapise. Takodje, SAM2 je optimizovan za bržu i precizniju segmentaciju, što ga čini pogodnijim za primenu u zahtevnim situacijama.
 
-SAM2 model kombinuje visoku tačnost segmentacije sa brzinom i fleksibilnošću interaktivnog izbora objekata, omogućavajući primenu u širem spektru slučajeva bez potrebe za dodatnim treninzima ili podešavanjima. Ovo ga čini konkurentnim i pogodnim za moderne aplikacije video editovanja i računarske vizije.
+SAM2 model kombinuje visoku tačnost segmentacije sa brzinom i fleksibilnošću načina izbora objekata, omogućavajući primenu u raznim slučajeva bez potrebe za dodatnim treninzima ili podešavanjima. Ovo ga čini konkurentnim i pogodnim za moderne aplikacije iz oblasti video editovanja i računarskog vida.
 
 ## Ograničenja SAM2 modela
 
@@ -70,7 +70,7 @@ Iako SAM2 predstavlja značajan napredak u oblasti segmentacije objekata na vide
 
 Takođe, vreme obrade brzo raste ukoliko se prati više objekata simultano, jer se svaki objekat obrađuje zasebno. Ovo može dovesti do opterećenja sistema i mogućih grešaka, posebno na računarima sa slabijom hardverskom konfiguracijom. Još jedna značajna mana je loša predikcija maski kod objekata koji se kreću velikom brzinom, što može rezultirati deformacijama maski ili delimičnim pokrivanjem objekata u pojedinim frejmovima.
 
-Pored toga, iako SAM2 u većini slučajeva generiše precizne maske, neophodno je vršiti proveru kvaliteta tih maski i po potrebi ih ručno korigovati na problematičnim frejmovima dodavanjem dodatnih instrukcija za segmentaciju. Ova dodatna pažnja omogućava poboljšanje konačnih rezultata i kvalitetniju obradu video sadržaja.
+Pored toga, iako SAM2 u većini slučajeva generiše precizne maske, neophodno je vršiti proveru kvaliteta tih maski i po potrebi ih ručno korigovati na problematičnim frejmovima dodavanjem dodatnih instrukcija za segmentaciju. Ova dorada omogućava poboljšanje konačnih rezultata i kvalitetniju obradu video sadržaja.
 
 
 ##  Potrebne tehnologije i biblioteke
@@ -100,7 +100,7 @@ pip install -e .
 pip install sam2
 ```
 
-3. Preuzmite pretrenirane modele (checkpoint fajlove) za SAM2 sa zvanične SAM2 stranice:
+3. Preuzmite pretrenirane modele (checkpoint fajlove) za SAM2 sa zvanične SAM2 stranice i povežite putanje do preuzetih fajlova u vašoj aplikaciji prilikom kreiranja prediktora:
 https://github.com/facebookresearch/sam2
 
 4. (Opciono)
@@ -154,7 +154,12 @@ predictor = build_sam2_video_predictor(model_cfg,checkpoint).to(device)
 ```
 ### Inicijalizacija prediktora
 
-Nakon kreiranja prediktora, potrebno je da pripremimo listu slika tako što podelimo video na vremenske intervale i inicijalizujemo stanje prediktora na osnovu dobijenih slika.
+Nakon kreiranja prediktora, potrebno je da pripremite listu slika tako što podelite video na vremenske intervale i inicijalizujete stanje prediktora na osnovu dobijenih slika. Deljenje videa na frejmove se postiže komandom ffmpeg alata.
+
+```
+ffmpeg -i vid.mp4 -q:v 2 -start_number 0 %05d.jpg
+```
+
 
 ```python
 video_dir = "C:\\Users\\user\\Desktop\\diplomski\\sam2\\sam2\\video"
@@ -171,7 +176,7 @@ predictor.reset_state(inference_state)
 ```
 ### Kreiranje maski
 
-Glavni razlog za korišćenje ovog prediktora je kreiranje maski za svaki deo video zapisa. Kreiranje maski se vrši funkcijom prediktora koja, na osnovu unetih pozitivnih i negativnih tačaka, generiše odgovarajuće maske za svaki od izabranih objekata. Pozitivne tačke označavaju deo ili ceo objekat za koji želimo da napravimo masku, dok negativne tačke omogućavaju precizno definisanje delova slike koje ne želimo da budu uključene u segmentaciju.
+Glavni razlog za korišćenje ovog prediktora je kreiranje maski za odabrane objekte u svakom delu video zapisa. Kreiranje maski se vrši funkcijom prediktora koja, na osnovu unetih pozitivnih i negativnih tačaka, generiše odgovarajuće maske za svaki od izabranih objekata. Pozitivne tačke označavaju deo ili ceo objekat za koji želite da napravite masku, dok negativne tačke omogućavaju precizno definisanje delova slike koje ne želite da budu uključene u segmentaciju.
 
 ```python
 prompts={}
@@ -192,7 +197,7 @@ prompts={}
 
 ### Propagacija 
 
-Nakon odabira maski za naše objekte sa slike, potrebno je izvršiti funkciju prediktora koja prolazi kroz sve naredne kadrove video zapisa i pronalazi maske za odabrane objekte na početnoj slici. Povratna vrednost ove funkcije se koristi za obradu svake slike na osnovu dobijenih maski.  
+Nakon odabira maski za objekte sa slike, potrebno je da izvršite funkciju prediktora koja prolazi kroz sve naredne kadrove video zapisa i pronalazi maske za odabrane objekte na početnoj slici. Povratna vrednost ove funkcije se koristi za obradu svake slike na osnovu dobijenih maski.  
 Zbog mogućnosti da korisnik izabere bilo koji vremenski trenutak u video zapisu, predikcija se mora izvršiti u oba smera — od izabranog trenutka do kraja video zapisa, kao i od tog trenutka nazad do početka.
 
 ```python
@@ -275,11 +280,17 @@ def change_BG_color(image,case= None):
     return new_image
 ```
 
+Nakon obrade svih frejmova video zapisa ponovo se koristi funkcija ffmpeg-a za spajanje svih dobijenih frejmova u video zapis.
+
+```
+ffmpeg -framerate 30 -i s%d.png -c:v libx264 -pix_fmt yuv420p output.mp4
+```
+
 ## Zaključak
 
 SAM2 model predstavlja moćno i fleksibilno rešenje za segmentaciju objekata u video zapisima, omogućavajući precizno izdvajanje i praćenje objekata kroz čitav video. Njegova integracija u aplikacije za video obradu olakšava kreiranje sofisticiranih efekata i poboljšava korisničko iskustvo.
 
-Iako SAM2 donosi značajna unapređenja u odnosu na svog prethodnika, posebno u tačnosti i brzini segmentacije, postoje ograničenja vezana za složene scene, brzinu kretanja objekata i zahtevnost hardvera. Zbog toga je važno pažljivo birati primenu i biti spreman na dodatne dorade maski u zahtevnijim slučajevima.
+Iako SAM2 donosi značajna unapređenja u odnosu na svog prethodnika, posebno u tačnosti i brzini segmentacije, postoje ograničenja vezana za složene scene, brzinu kretanja objekata i zahteve hardvera. Zbog toga je važno pažljivo birati primenu i biti spreman na dodatne dorade maski u zahtevnijim slučajevima.
 
 Prema tome, SAM2 je snažan alat za istraživanje i razvoj u oblasti računarskog vida i video obrade, sa velikim potencijalom za dalji razvoj i primenu u realnim sistemima.
 
