@@ -17,7 +17,7 @@ from tkinter import filedialog
 
 
 
-device = torch.device("cuda")
+device = torch.device("cpu")
 if device.type == "cuda":
     # use bfloat16 for the entire notebook
     torch.autocast("cuda", dtype=torch.bfloat16).__enter__()
