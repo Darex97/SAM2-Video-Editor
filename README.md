@@ -111,7 +111,7 @@ Nakon što instalirate sve zavisnosti i preuzmete SAM2 model, aplikaciju možete
 ###  Opcija 1: Pokretanje iz Visual Studio Code-a
 
 1. Otvorite folder projekta u **Visual Studio Code-u**  
-2. Otvorite fajl `test1.py`  
+2. Otvorite fajl `videoEditor.py`  
 3. Kliknite na **Run** ili pokrenite program preko terminala unutar VS Code-a
 
 ###  Opcija 2: Pokretanje iz terminala
@@ -119,7 +119,7 @@ Nakon što instalirate sve zavisnosti i preuzmete SAM2 model, aplikaciju možete
 Ukoliko ste u korenskom direktorijumu projekta (`SAM2-Video-Editor`), koristite komandu:
 
 ```bash
-python test1.py
+python videoEditor.py
 ```
 
 ## Implementacija
