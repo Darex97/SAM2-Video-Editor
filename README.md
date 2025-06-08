@@ -16,8 +16,9 @@ Cilj ovog rada i aplikacije je kreiranje desktop rešenja koje koristi SAM2 mode
 - [Instalacija](#instalacija)  
 - [Pokretanje aplikacije](#pokretanje-aplikacije)  
 - [Implementacija](#implementacija)  
+- [Primeri nekih funkcija za obradu slika](#primeri-nekih-funkcija-za-obradu-slika)
 - [Zaključak](#zaključak)
- 
+- [Citiranje](#citiranje)
 
 ## SAM2 (Segment Anything Model 2)
 
@@ -59,7 +60,7 @@ Trenutno postoji više rešenja za segmentaciju objekata na slikama i video zapi
 
 Takođe, mnogi tradicionalni pristupi se oslanjaju na specifične domene ili vrste objekata, što ograničava njihovu primenu u generičkim scenarijima. Pored toga, segmentacija video zapisa sa doslednim praćenjem objekata kroz sve kadrove često je izazov zbog problema kao što su promene osvetljenja, pozadine i pomeranja objekata.
 
-U poređenju sa originalnim **Segment Anything Modelom (SAM)**, **SAM2** donosi značajna poboljšanja u brzini obrade i tačnosti segmentacije, kao i bolju podršku za video zapise kroz efikasnije praćenje objekata u vremenskoj dimenziji. SAM2 je optimizovan za bržu i precizniju segmentaciju, što ga čini pogodnijim za primenu u zahtevnim i interaktivnim scenarijima.
+U poređenju sa originalnim **Segment Anything Modelom (SAM)**, **SAM2** donosi značajna poboljšanja u brzini obrade i tačnosti segmentacije, kao i bolju podršku za video zapise kroz efikasnije praćenje objekata u vremenskoj dimenziji. Za razliku od SAM-a koji je ograničen na statične slike, SAM2 omogućava pouzdanu segmentaciju i praćenje objekata kroz video zapise. Takodje, SAM2 je optimizovan za bržu i precizniju segmentaciju, što ga čini pogodnijim za primenu u zahtevnim i interaktivnim scenarijima.
 
 SAM2 model kombinuje visoku tačnost segmentacije sa brzinom i fleksibilnošću interaktivnog izbora objekata, omogućavajući primenu u širem spektru slučajeva bez potrebe za dodatnim treninzima ili podešavanjima. Ovo ga čini konkurentnim i pogodnim za moderne aplikacije video editovanja i računarske vizije.
 
@@ -211,7 +212,68 @@ video_segments = {}
         }
 ```
 
-Nakon toga je potrebno implementirati željene funkcije za obradu slika koje će koristiti dobijene maske iz propagacije.
+Nakon toga je potrebno implementirati željene funkcije za obradu slika koje će koristiti dobijene maske iz propagacije i tako editovati samo delove slike gde se nalazi izabrani objekat.
+
+##Primeri nekih funkcija za obradu slika
+
+```python
+def change_BG_gradient(Img, color_start=(0, 0, 1), color_end=(1, 0, 0)):
+    
+    image_for_process= np.array(Img)
+    h = image_for_process.shape[0]
+    w = image_for_process.shape[1]
+
+    new_img= np.zeros((h,w,3),dtype=np.uint8)
+
+    gradient_r = np.linspace(color_start[0], color_end[0], w)
+    gradient_g = np.linspace(color_start[1], color_end[1], w)
+    gradient_b = np.linspace(color_start[2], color_end[2], w)
+    
+    
+    gradient = np.stack([np.tile(gradient_r, (h, 1)),
+                         np.tile(gradient_g, (h, 1)),
+                         np.tile(gradient_b, (h, 1))],
+                         axis=-1)  
+
+    
+    new_img[:,:,:] = image_for_process[:, :, :3] * gradient
+
+    
+    
+    return new_img
+```
+
+```python
+def change_BG_color(image,case= None):
+    image_for_process= np.array(image)
+    n_r=0
+    n_g=0
+    n_b=0
+    h = image_for_process.shape[0]
+    w = image_for_process.shape[1]
+    new_image= np.zeros((h,w,3),dtype=np.uint8)
+
+    if case=="Gray":
+
+        gray = 0.299 * image_for_process[:, :, 0] + 0.587 * image_for_process[:, :, 1] + 0.144 * image_for_process[:, :, 2]
+        gray = np.clip(gray, 0, 255).astype(np.uint8)
+        new_image[:, :, 0] = gray  
+        new_image[:, :, 1] = gray  
+        new_image[:, :, 2] = gray 
+
+    elif case=="White":
+        n_r=255
+        n_g=255
+        n_b=255
+        new_image[:,:]=[n_r,n_g,n_b]
+    elif case=="Green":
+        n_r=0
+        n_g=255
+        n_b=0
+        new_image[:,:]=[n_r,n_g,n_b]
+
+    return new_image
+```
 
 ## Zaključak
 
