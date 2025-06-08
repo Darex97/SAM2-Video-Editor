@@ -50,11 +50,11 @@ Korišćenje SAM2 modela donosi brojne prednosti u obradi slike i video zapisa. 
 
 ## Konkurentna rešenja
 
-Trenutno postoji više rešenja za segmentaciju objekata na slikama, od kojih su najpoznatija **Mask R-CNN**, **DeepLab**, **U-Net** i **YOLACT**. Ovi modeli su pokazali dobre rezultate u preciznoj segmentaciji, ali često zahtevaju značajne resurse za treniranje. Još jedan problem je što svi ovi modeli ne mogu da vrše segmentaciju na video zapisima bez integracije sa posebnim algoritmima za praćenje objekata kroz vreme, što dodatno komplikuje implementaciju i povećava upotrebu resursa (SAM + Xmem++ i SAM + Cutie).
+Trenutno postoji više rešenja za segmentaciju objekata na slikama, od kojih su najpoznatija **Mask R-CNN**, **DeepLab**, **U-Net** i **YOLACT**. Ovi modeli su pokazali dobre rezultate u segmentaciji, ali često zahtevaju značajne resurse za treniranje. Još jedan problem je što svi ovi modeli ne mogu da vrše segmentaciju na video zapisima bez integracije sa posebnim algoritmima za praćenje objekata kroz vreme, što dodatno komplikuje implementaciju i povećava upotrebu resursa (SAM + Xmem++ i SAM + Cutie).
 
 Takođe, mnogi tradicionalni pristupi se oslanjaju na specifične domene ili vrste objekata, što ograničava njihovu primenu u svakodnevnim situacijama. Pored toga, segmentacija video zapisa sa doslednim praćenjem objekata kroz sve kadrove često je izazov zbog problema kao što su promene osvetljenja, pozadine i pomeranja objekata.
 
-U poređenju sa originalnim **Segment Anything Modelom (SAM)**, **SAM2** donosi značajna poboljšanja u brzini obrade i tačnosti segmentacije, kao i bolju podršku za video zapise kroz efikasnije praćenje objekata u vremenskoj dimenziji. Za razliku od SAM-a koji je ograničen na statične slike, SAM2 omogućava pouzdanu segmentaciju i praćenje objekata kroz video zapise. Takodje, SAM2 je optimizovan za bržu i precizniju segmentaciju, što ga čini pogodnijim za primenu u zahtevnim situacijama.
+U poređenju sa originalnim **Segment Anything Modelom (SAM)**, **SAM2** donosi značajna poboljšanja u brzini obrade i tačnosti segmentacije, kao i podršku za video zapise kroz praćenje objekata u vremenskoj dimenziji. Za razliku od SAM-a koji je ograničen na statične slike, SAM2 omogućava pouzdanu segmentaciju i praćenje objekata kroz video zapise. Takodje, SAM2 je optimizovan za bržu i precizniju segmentaciju, što ga čini pogodnijim za primenu u zahtevnim situacijama.
 
 SAM2 model kombinuje visoku tačnost segmentacije sa brzinom i fleksibilnošću načina izbora objekata, omogućavajući primenu u raznim slučajeva bez potrebe za dodatnim treninzima ili podešavanjima. Ovo ga čini konkurentnim i pogodnim za moderne aplikacije iz oblasti video editovanja i računarskog vida.
 
@@ -124,7 +124,7 @@ python videoEditor.py
 ### Kreiranje prediktora
 
 - Originalni kod Meta kompanije je optimizovan za izvršavanje na grafičkim karticama koristeći CUDA.  
-- U ovoj implementaciji omogućeno je izvršavanje i na CPU-u, što je sporije u poređenju sa GPU-om.  
+- U ovoj implementaciji omogućeno je izvršavanje na CPU-u, što je sporije u poređenju sa GPU-om.  
 - Za pokretanje modela koristimo PyTorch biblioteku za učitavanje prethodno treniranih modela i konfiguracije.  
 - Izbor uređaja za izvršavanje (CPU ili GPU) je neophodan za pokretanje predikcija.  
 - Prediktor za segmentaciju se kreira pomoću SAM2 modela, prilagođenog za CPU izvršavanje.
@@ -282,7 +282,7 @@ ffmpeg -framerate 30 -i s%d.png -c:v libx264 -pix_fmt yuv420p output.mp4
 
 ## Zaključak
 
-SAM2 model predstavlja moćno i fleksibilno rešenje za segmentaciju objekata u video zapisima, omogućavajući precizno izdvajanje i praćenje objekata kroz čitav video. Njegova integracija u aplikacije za video obradu olakšava kreiranje sofisticiranih efekata i poboljšava korisničko iskustvo.
+SAM2 model predstavlja moćno i fleksibilno rešenje za segmentaciju objekata u video zapisima, omogućavajući precizno izdvajanje i praćenje objekata kroz čitav video. Njegova integracija u aplikacije za video obradu olakšava kreiranje preciznih efekata i poboljšava korisničko iskustvo.
 
 Iako SAM2 donosi značajna unapređenja u odnosu na svog prethodnika, posebno u tačnosti i brzini segmentacije, postoje ograničenja vezana za složene scene, brzinu kretanja objekata i zahteve hardvera. Zbog toga je važno pažljivo birati primenu i biti spreman na dodatne dorade maski u zahtevnijim slučajevima.
 
