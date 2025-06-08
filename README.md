@@ -43,9 +43,6 @@ SAM2 korisniku pruža mogućnost da interaktivno izabere objekte pomoću pozitiv
 - **Podrška za različite vrste objekata**  
   Model je generički i sposoban za segmentaciju širokog spektra objekata bez potrebe za dodatnim treninzima ili podešavanjima.
 
-- **Praćenje objekata kroz video**  
-  SAM2 omogućava konzistentnu segmentaciju istog objekta kroz sve kadrove video zapisa, što olakšava dalju obradu i analizu.
-
 ## Problemi koje SAM2 rešava
 
 SAM2 model rešava nekoliko ključnih problema u oblasti segmentacije slike i videa. Prvo, omogućava preciznu segmentaciju objekata čak i u složenim scenama sa više objekata i zahtevnim pozadinama, što je izazov za mnoge tradicionalne metode. Takođe, pruža interaktivnu i fleksibilnu selekciju objekata koristeći različite pristupe, poput tačaka i pravougaonika, čime se poboljšava tačnost segmentacije i korisničko iskustvo. Jedna od važnih karakteristika SAM2 je segmentacija kroz video zapise, gde model omogućava dosledno praćenje i izdvajanje objekata kroz sve kadrove, što značajno olakšava obradu dinamičnih scena. Pored toga, SAM2 je optimizovan za brzinu i efikasnost, što omogućava rad u realnom vremenu ili obradu velikih video fajlova bez gubitka performansi. Model je generički, što znači da može segmentisati širok spektar objekata bez potrebe za dodatnim treninzima ili specijalnim podešavanjima za svaki novi tip objekta, što značajno smanjuje vreme i resurse potrebne za implementaciju. Na kraju, SAM2 unapređuje korisničko iskustvo u video editovanju, omogućavajući preciznu primenu efekata i manipulaciju izdvojenim objektima, čineći proces kreativne obrade videa intuitivnijim i efikasnijim.
