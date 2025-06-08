@@ -37,9 +37,6 @@ SAM2 korisniku pruža mogućnost da interaktivno izabere objekte pomoću pozitiv
 - **Generisanje maski**  
   Model kreira detaljne maske koje predstavljaju tačne pozicije izdvojenih objekata u svakom kadru video zapisa ili na slici.
 
-- **Poboljšana tačnost i brzina**  
-  U poređenju sa prethodnim verzijama, SAM2 donosi značajna poboljšanja u brzini obrade i preciznosti segmentacije.
-
 - **Podrška za različite vrste objekata**  
   Model je generički i sposoban za segmentaciju širokog spektra objekata bez potrebe za dodatnim treninzima ili podešavanjima.
 
